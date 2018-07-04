@@ -1,0 +1,38 @@
+<div class="wrap" @fade
+     [ngClass]="{'active': isActive}"
+>
+  <div class="wrap_block">
+    <div class="wrap__block_item"
+         (click)="onActive()"
+         [routerLink]="['/portfolio','photo-gallery']"
+         title="Photo-gallery"
+    >
+      <i class="material-icons camera_alt">camera_alt</i>
+    </div>
+    <div class="wrap__block_item"
+         (click)="onActive()"
+         [routerLink]="['/portfolio','calculator']"
+         title="Calculator"
+    >
+      <i class="material-icons gradient">gradient</i>
+    </div>
+  </div>
+  <div class="wrap_block">
+    <div class="wrap__block_item"
+         (click)="onActive()"
+         [routerLink]="['/portfolio','battleship']"
+         title="Game Battle-Ship"
+    >
+      <i class="material-icons directions_boat">directions_boat</i>
+    </div>
+    <div class="wrap__block_item"
+         (click)="onActive()"
+         [routerLink]="['/portfolio','todolist']"
+         title="To do list"
+    >
+      <i class="material-icons list_alt">list_alt</i>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,73 @@
+.title {
+  text-align: center;
+  color: tomato;
+  letter-spacing: 4px;
+}
+div#board {
+  position: relative;
+  /*width: 724px;*/
+  /*height: 583px;*/
+  width: 505px;
+  height: 455px;
+  margin: 50px auto 0;
+  background: url("../../../../assets/imgbattleship/board.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(0,0,0,1);
+}
+
+div#messageArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(83, 175, 19);
+}
+.hit {
+  background: url("../../../../assets/imgbattleship/ship.png") no-repeat center center;
+}
+.miss {
+  background: url("../../../../assets/imgbattleship/miss.png") no-repeat center center;
+}
+table {
+  border-spacing: 0;
+   /*border-collapse: collapse;*/
+  position: absolute;
+  left: 88px;
+  top: 51px;
+}
+td {
+  width: 51px;
+  height: 51px;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: black;
+  margin: 1px;
+}
+
+.form input {
+  background-color: rgb(152, 207, 113);
+  border-color: rgb(83, 175, 19);
+  font-size: 1em;
+}
+
+.form input[type="text"] {
+  width: 70px;
+}
+
+
+@media screen and (max-width: 620px) {
+  div#board {
+    margin-left: 60px;
+  }
+
+  .title {
+    margin-left: 80px;
+  }
+}
+

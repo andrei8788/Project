@@ -1,0 +1,128 @@
+body {
+	background: #CCCCCC;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+div.list {
+	width: 500px;
+	box-shadow: 0 0 30px rgba(0,0,0,0.5);
+} 
+
+div.list #name {
+	margin-top: 20px;
+}
+
+input:checked + label {
+	text-decoration: line-through;
+	color: #DCDCDC;
+}
+
+div.list ul li input.checked {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+div.list ul li .form-control {
+	margin-bottom: -15px;
+}
+
+/*preloader */
+div.list ul li .loading {     					
+	position: relative;
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-top: -35px;
+	opacity: 0.3; 
+}
+
+div.list .divblock {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	background: white;
+	margin-bottom: 20px;
+	margin-top: -15px;
+	border-radius: 3px;
+}
+
+div.list ul li .preloaderfortask {
+	margin-left: 120px;
+	margin-top: 19px;
+}
+/*preloader */
+div.list ul li img.delete {
+	position: relative;
+	cursor: pointer;
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-top: 3px;
+}
+
+div.list button.btn {
+	font-size: 15px;
+	height: 30px;
+	background: #CCCCCC;
+}
+
+div.list div.counter {
+	float: left;
+	margin: 0 5px;
+	padding-top: 8px;
+	font-size: 15px;	
+}
+
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+
+/* /////////////////////////////////////////////////////// */
+/* .mod {
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+.mod-content {
+    margin: 30% auto;
+    margin-top: 10%;
+    padding:20px;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 3px;
+    height: 200px;
+    background: rgb(195, 178, 119);
+}
+
+.close {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 5px;
+    float: right;
+}
+
+.close:hover {
+    border: 1px solid grey;
+    background-color: rgb(126, 53, 53);
+    border-radius: 2px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(126, 53, 53);
+} */

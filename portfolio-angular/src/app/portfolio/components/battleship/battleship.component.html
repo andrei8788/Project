@@ -1,0 +1,16 @@
+<div class="title">
+  <h1>Game Battle-Ship</h1>
+</div>
+<div id="board" @fade>
+  <div id="messageArea" [textContent]="displayMessage"></div>
+  <table>
+    <tr *ngFor="let tr of table">
+      <td *ngFor="let td of tr" class="{{td}}"></td>
+    </tr>
+  </table>
+  <div class="form">
+    <input type="text" #guess (keyup.enter)="handleFireButton(guess.value); guess.value=''" placeholder="A0">
+    <input type="button" (click)="handleFireButton(guess.value); guess.value=''" value="Fire!">
+  </div>
+</div>
+

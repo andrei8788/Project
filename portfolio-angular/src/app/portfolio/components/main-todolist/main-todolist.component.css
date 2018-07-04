@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  color: tomato;
+  letter-spacing: 4px;
+}
+
+.title h5 {
+  margin-bottom: -20px;
+}
+
+.wrap {
+  padding-bottom: 74px;
+}

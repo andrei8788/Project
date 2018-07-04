@@ -1,0 +1,38 @@
+<aside class="left_side" [ngClass]="{'active': isActive}">
+  <div class="btn_mnu" [ngClass]="{'active': isActive}" (click)="buttonActive()" title="Menu">
+    <div class="btn_row"></div>
+    <div class="btn_row"></div>
+    <div class="btn_row"></div>
+  </div>
+
+  <div class="aside_content">
+    <div class="user_info">
+      <img src="../../assets/img/logo.png" alt="Андрей Доложевский">
+      <h2>Andrei Dolozhevskij</h2>
+      <p>Junior Frontend Developer</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        ><a
+          [routerLink]="['/portfolio', {isActive: false}]"
+        ><i class="material-icons">business_center</i>Portfolio</a></li>
+        <li
+          routerLinkActive="active"
+        ><a
+          routerLink="/about-me"
+        ><i class="material-icons">person</i>About me</a></li>
+        <li
+          routerLinkActive="active"
+        ><a
+          routerLink="/contacts"
+        ><i class="material-icons">contact_phone</i>Contacts</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+<div class="content">
+</div>

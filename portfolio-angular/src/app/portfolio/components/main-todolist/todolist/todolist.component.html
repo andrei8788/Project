@@ -1,0 +1,24 @@
+<div class="toDoList">
+    <app-todoform [counterForm]="counter"
+                  (onCounterForm)="onCounterForm($event)"
+                  (onDisabledForm)="onDisabledForm($event)"
+                  (createTask)="onCreateTask($event)"
+                  [idList]="id">
+    </app-todoform>
+    <ul [ngClass]="{'disabled': disabled, 'list-group': true}">
+         <app-todotask [idList]="id"
+                       [taskItem]="task"
+                       [counterTask]="counter"
+                       (onCounterTask)="onCounterTask($event)"
+                       (onDisabledTask)="onDisabledTask($event)"
+                       (deleteTask)="onDeleteTask($event)"
+                       *ngFor="let task of tasks">
+
+         </app-todotask>
+    </ul>
+     <app-todofiltr (filter)="onFilter($event)"
+                    [counter]="counter"
+                    [disabled]="disabled"
+                    *ngIf="allTasks.length !== 0">
+     </app-todofiltr>
+</div>

@@ -1,0 +1,44 @@
+<div class="title">
+  <h1>Calculator</h1>
+</div>
+<div class="wrap__calculator" @fade>
+  <div class="wrap__display">
+    <input
+      class="result"
+      [value]="values"
+      type="text"
+      disabled
+      [ngStyle]="{'font-size': values.toString().length <= 14 ? 30 + 'px' : values.toString().length > 14 && values.toString().length <= 21 ? 20 + 'px' : 15 + 'px'}"
+    >
+  </div>
+  <div class="wrap__button">
+    <div class="wrap__button_group">
+      <button (click)="onSpecialOperationButtonClicked($event)">←</button>
+      <button (click)="onNumberButtonClicked($event)">7</button>
+      <button (click)="onNumberButtonClicked($event)">4</button>
+      <button (click)="onNumberButtonClicked($event)">1</button>
+      <button (click)="onSpecialOperationButtonClicked($event)">±</button>
+    </div>
+    <div class="wrap__button_group">
+      <button (click)="onSpecialOperationButtonClicked($event)">C</button>
+      <button (click)="onNumberButtonClicked($event)">8</button>
+      <button (click)="onNumberButtonClicked($event)">5</button>
+      <button (click)="onNumberButtonClicked($event)">2</button>
+      <button (click)="onNumberButtonClicked($event)">0</button>
+    </div>
+    <div class="wrap__button_group">
+      <button (click)="onSpecialOperationButtonClicked($event)">√</button>
+      <button (click)="onNumberButtonClicked($event)">9</button>
+      <button (click)="onNumberButtonClicked($event)">6</button>
+      <button (click)="onNumberButtonClicked($event)">3</button>
+      <button (click)="onSpecialOperationButtonClicked($event)">.</button>
+    </div>
+    <div class="wrap__button_group">
+      <button (click)="onOperationButtonClicked($event)">÷</button>
+      <button (click)="onOperationButtonClicked($event)">x</button>
+      <button (click)="onOperationButtonClicked($event)">-</button>
+      <button (click)="onOperationButtonClicked($event)">+</button>
+      <button (click)="onSpecialOperationButtonClicked($event)">=</button>
+    </div>
+  </div>
+</div>

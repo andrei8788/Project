@@ -1,0 +1,89 @@
+<div class="inside" @fade>
+
+  <div class="content">
+
+    <div class="content_header">
+      <h1>Feedback</h1>
+      <p>Contact me in one of the following ways</p>
+    </div>
+
+    <div class="content_body">
+      <div class="row form_contacts">
+        <div class="col-sm-6">
+          <ul class="ul_contacts">
+            <li>
+              <h3><i class="material-icons">mail_outline</i> My email:</h3>
+              <p><a>andrei87-88@mail.ru</a></p>
+            </li>
+            <li>
+              <h3><i class="material-icons">location_on</i> Address:</h3>
+              <p>г.Minsk st.Pritytskogo 78</p>
+            </li>
+            <li>
+              <h3><i class="material-icons">phone</i> Phone:</h3>
+              <p>+375 (029) 201-15-50</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <form
+            id="callback"
+            class="callback"
+            [formGroup]="form"
+            (submit)="onSubmit()"
+          >
+            <h3>Submit your bid</h3>
+            <label>
+              Your name
+              <input
+                type="text"
+                name="name"
+                required
+                formControlName="name"
+              >
+              <span
+                class="invalid"
+                *ngIf="form.get('name').invalid && form.get('name').touched"
+              >Field can not be empty</span>
+            </label>
+            <label>
+              Your E-mail
+              <input
+                type="text"
+                name="email"
+                required
+                formControlName="email"
+              >
+              <span class="invalid"
+                    *ngIf="form.get('email').invalid && form.get('email').touched"
+              >
+                <span
+                  *ngIf="form.get('email')['errors']['required']">Field can not be empty</span>
+                <span
+                  *ngIf="form.get('email')['errors']['email']">
+Please enter a valid email</span>
+              </span>
+            </label>
+            <label>
+              A comment
+              <textarea
+                name="message"
+                formControlName="message"
+              ></textarea>
+            </label>
+
+            <button
+              class="button"
+              type="submit"
+              [disabled]="form.invalid && form.touched"
+            >Submit your bid</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

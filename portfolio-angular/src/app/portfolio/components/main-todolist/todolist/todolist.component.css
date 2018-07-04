@@ -1,0 +1,36 @@
+.toDoList {
+  width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 620px) {
+  .toDoList {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .toDoList {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .toDoList {
+    width: 292px;
+  }
+}

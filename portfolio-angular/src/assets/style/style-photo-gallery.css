@@ -1,0 +1,9 @@
+.plain-container {
+  margin-right: 0;
+  width: 100% !important;
+}
+
+.plain-container .image {
+  margin-top: 4px;
+  flex: 1 1 19.9em !important;
+}

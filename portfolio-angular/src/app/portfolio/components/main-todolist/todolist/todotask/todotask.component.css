@@ -1,0 +1,85 @@
+li {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 57px;
+}
+
+div.wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+div.check {
+  display: flex;
+}
+
+div.check input.input_check {
+  cursor: pointer;
+  margin: 10px 10px 0;
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+}
+
+input:checked + div.text {
+    text-decoration: line-through;
+    color: #DCDCDC;
+  }
+
+div.text {
+  width: 100%;
+  text-align: left;
+  margin-top: 3px;
+}
+
+.delete {
+  width: 30px;
+  cursor: pointer;
+}
+
+div.change_title {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 3px;
+}
+
+div.change_title .input_change__title {
+    width: 400px;
+    height: 25px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 570px) {
+  div.change_title .input_change__title {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  li {
+    padding-left: 0;
+    padding-right: 0;
+    width: 292px;
+    letter-spacing: -1px;
+    font-size: 14px;
+  }
+  div.change_title .input_change__title {
+    width: 210px;
+  }
+}

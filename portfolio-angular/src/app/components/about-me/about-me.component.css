@@ -1,0 +1,185 @@
+h2 {
+  margin-top: 0;
+  padding-top: .8em;
+}
+
+nav {
+  position: relative;
+  perspective: 600px;
+}
+
+.cool > li > a {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 20px;
+  background: #181818;
+  padding:10px 20px;
+  display: inline-block;
+  margin:20px;
+  border-radius:5px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cool > li {
+  position: relative;
+  display:flex;
+  justify-content: center;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  top:-15px;
+  border-radius:2px;
+  transform: translateY(100px);
+  will-change: opacity;
+  padding:20px;
+  display: none;
+}
+
+.trigger-enter .dropdown {
+  display: block;
+  padding: 20px;
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.dropdownBackground {
+  width:100px;
+  height:100px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  transition:all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity:0;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  width:20px;
+  height:20px;
+  display: block;
+  background:white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.bio {
+  min-width:500px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.7;
+}
+
+.bio img {
+  margin-top: -222px;
+  float:left;
+  margin-right:20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.courses {
+  min-width:300px;
+}
+
+.courses li {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: white;
+}
+
+a.button {
+  background: #ffbf00;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+a.button:hover {
+  opacity: 0.6;
+}
+
+.button[href*=twitter] { background: #019FE9; }
+.button[href*=facebook] { background: #3B5998; }
+.button[href*=linkedin] { background: #4d91ff; }
+
+div.photo,
+div.photo img {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto 0;
+  border-radius: 50%;
+}
+
+div.about_me {
+  width: 70vw;
+  margin: 40px auto 0;
+  color: #d4d4d4;
+}
+
+div.about_me h1 {
+  font-weight: 100;
+}
+
+div.about_me h1,
+div.about_me p {
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .cool>li:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav,
+  div.wrap {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    margin-left: 15%;
+  }
+  .cool > li > a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .cool > li > a {
+    font-size: 11px;
+  }
+  nav,
+  div.wrap {
+    margin-left: 25%;
+  }
+}
+

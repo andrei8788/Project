@@ -1,0 +1,28 @@
+<li [ngClass]="{'disabled': disabled}" class="list-group-item" (mouseover)="showButtonDelete()"
+    (mouseout)="hideButtonDelete()">
+  <div class="wrap">
+    <div class="check">
+      <input type="checkbox" [checked]="taskItem.isDone" (change)="onChange()" class="input_check">
+      <div class="text" (dblclick)="changeTitle()" *ngIf="isStateTitle">{{ taskItem.title }}</div>
+    </div>
+    <div class="change_title" *ngIf="!isStateTitle">
+      <input type="text" class="input_change__title" #title (keyup.enter)="saveTitle(title.value); hideButtonDelete()"
+             value="{{ taskItem.title }}">
+    </div>
+    <div class="wrap_delete__img" *ngIf="!isStatePreloader">
+      <img class="delete delete_img" src="../../../../../../assets/img/delete.png"
+           (click)="delete(); hideButtonDelete()"
+           [ngStyle]="{'display': hover ? 'inline' : 'none'}"/>
+    </div>
+    <div class="loading" *ngIf="isStatePreloader">
+      <img class="delete" src="../../../../../../assets/img/loading.gif">
+    </div>
+  </div>
+</li>
+<!--Модальное окно-->
+<app-message
+  [@messageTrigger]="'show'"
+  *ngIf="statusMessage"
+  [message]="message"
+  (statusMessage)="onStatusMessage($event)"
+></app-message>

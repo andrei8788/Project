@@ -1,0 +1,12 @@
+<div class="form">
+    <input type="text" *ngIf="!isStatePreloader" #title (keyup.enter)="create(title.value); title.value = ''"
+           class="input" autofocus>
+    <div class="preloader" *ngIf="isStatePreloader"><img src="../../../../../../assets/img/30.gif" alt=""></div>
+</div>
+<!--модальное окно-->
+<app-message
+  [@messageTrigger]="'show'"
+  *ngIf="statusMessage"
+  [message]="message"
+  (statusMessage)="onStatusMessage($event)"
+></app-message>
