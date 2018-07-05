@@ -1,6 +1,9 @@
 <div class="mod">
-  <div class="mod-content">
-    <span class="close" (click)="onStatusMessage()">x</span>
+
+</div>
+<div class="wrap_mod__content" (click)="onStatusMessage($event.target)">
+  <div class="mod_content">
     <p>{{message}}</p>
+    <span class="close" (click)="onStatusMessage($event.target)">x</span>
   </div>
 </div>

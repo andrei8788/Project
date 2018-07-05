@@ -9,8 +9,11 @@ export class MessageComponent {
   @Input() message: string;
   @Output() statusMessage = new EventEmitter();
 
-  onStatusMessage(statusMessage) {
-    statusMessage = false;
-    this.statusMessage.emit(statusMessage);
+  onStatusMessage(el) {
+    const value = el.classList.value;
+    if (value === 'close' || value === 'wrap_mod__content') {
+      const statusMessage = false;
+      this.statusMessage.emit(statusMessage);
+    }
   }
 }
