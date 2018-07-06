@@ -13,6 +13,7 @@ import {PhotoGalleryComponent} from './components/photo-gallery/photo-gallery.co
 import {PortfolioComponent} from './portfolio.component';
 import {PortfolioRoutingModule} from './portfolio-routing.module';
 import {MessageComponent} from '../core/components/message.component';
+import {GmapsComponent} from './components/gmaps/gmaps.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MessageComponent} from '../core/components/message.component';
     MainTodolistComponent,
     CalculatorComponent,
     PhotoGalleryComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    GmapsComponent
   ],
   imports: [
     CommonModule,

@@ -23,6 +23,7 @@
     "@angular/router": "^5.2.0",
     "@ks89/angular-modal-gallery": "^6.0.1",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "@types/googlemaps": "^3.30.10",
     "@types/hammerjs": "^2.0.35",
     "@types/mousetrap": "^1.6.0",
     "angular-common": "^0.1.0",
