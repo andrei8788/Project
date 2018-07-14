@@ -5,8 +5,6 @@
 }
 div#board {
   position: relative;
-  /*width: 724px;*/
-  /*height: 583px;*/
   width: 505px;
   height: 455px;
   margin: 50px auto 0;
@@ -14,7 +12,7 @@ div#board {
   background-size: cover;
   opacity: 0.9;
   border-radius: 5px;
-  box-shadow: 0 0 40px rgba(0,0,0,1);
+  box-shadow: 0 0 30px rgba(0,0,0,1);
 }
 
 div#messageArea {

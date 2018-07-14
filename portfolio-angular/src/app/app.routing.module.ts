@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {ElementRef, NgModule, ViewChild} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {AboutMeComponent} from './components/about-me/about-me.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
@@ -20,5 +20,5 @@ const routes: Routes = [
   ]
 })
 export class AppRoutingModule {
-
+  @ViewChild('wrapper') wrapper: ElementRef;
 }

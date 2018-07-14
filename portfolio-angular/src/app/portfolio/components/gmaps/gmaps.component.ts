@@ -12,7 +12,7 @@ export class GmapsComponent implements OnInit {
 
   ngOnInit() {
     const mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
+      center: new google.maps.LatLng(53.294096499999995, 24.4031411),
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };

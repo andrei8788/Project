@@ -56,8 +56,10 @@ div.change_title {
 }
 
 div.change_title .input_change__title {
-    width: 400px;
-    height: 25px;
+  width: 400px;
+  height: 25px;
+  border-width: 1px;
+  border-radius: 5px;
 }
 
 .disabled {

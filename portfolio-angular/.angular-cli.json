@@ -21,9 +21,16 @@
       "styles": [
         "./assets/style/style-photo-gallery.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles.css"
+        "styles.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/flat-icons/ecommerce.css",
+        "../node_modules/flat-icons/interface.css",
+        "../node_modules/flat-icons/technology.css",
+        "../node_modules/flat-icons/creative.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/nicescroll/jquery.nicescroll.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
