@@ -58,6 +58,12 @@
   opacity: 0.5;
 }
 
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .wrap__calculator {
     margin-right: 40px;

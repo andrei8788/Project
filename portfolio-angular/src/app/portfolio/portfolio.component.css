@@ -34,6 +34,7 @@ nav ul {
 
 .dropdown {
   opacity: 0;
+  display: none;
   position: absolute;
   overflow: hidden;
   top:-15px;
@@ -41,7 +42,6 @@ nav ul {
   transform: translateY(100px);
   will-change: opacity;
   padding:20px;
-  display: none;
 }
 
 .trigger-enter .dropdown {
@@ -115,10 +115,14 @@ nav ul {
 
 a.button {
   background: #ffbf00;
-  display: block;
+  display: none;
   padding: 10px;
   color: white;
   margin-bottom: 10px;
+}
+
+.trigger-enter-active a.button, .trigger-enter a.button{
+  display: block;
 }
 
 a.button:hover {
@@ -184,12 +188,6 @@ h4.photo {
   -ms-transition: all .8s;
   -o-transition: all .8s;
   transition: all .8s;
-}
-
-.wrap .wrap_first {
-}
-
-.wrap .wrap_two {
 }
 
 .wrap.active [class*=" fi-creative-"]:before,
@@ -284,10 +282,29 @@ h4.photo {
     margin-left: -123px;
   }
 
-}
-
-@media screen and (max-width: 310px) {
-  .cool > li > a {
-    font-size: 11px;
+  .wrap.active .wrap_first {
+    margin: 0;
   }
+
+  .wrap.active .wrap_two {
+    margin: 0;
+  }
+
+  .wrap.active [class*=" fi-creative-"]:before,
+  .wrap.active [class^="fi-ecommerce-"]:before,
+  .wrap.active [class^="fi-tech-"]:before,
+  .wrap.active [class^="fi-interface-"]:before,
+  .wrap.active [class^="fi-creative-"]:before {
+    font-size: 40px;
+    padding-left: 0;
+  }
+
+  .wrap.active {
+    margin-right: 0;
+  }
+
+  .cool > li > a {
+    padding-top: 12px;
+  }
+
 }

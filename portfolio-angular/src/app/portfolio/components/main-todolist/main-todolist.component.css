@@ -11,3 +11,13 @@
 .wrap {
   padding-bottom: 74px;
 }
+
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h5 {
+    font-size: 15px
+  }
+}

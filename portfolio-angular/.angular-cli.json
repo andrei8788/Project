@@ -28,9 +28,7 @@
         "../node_modules/flat-icons/technology.css",
         "../node_modules/flat-icons/creative.css"
       ],
-      "scripts": [
-        "./assets/nicescroll/jquery.nicescroll.min.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

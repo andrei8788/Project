@@ -47,7 +47,6 @@ export class PortfolioComponent implements OnInit {
 
   onActive() {
     this.isActive = true;
-
   }
 
 }
