@@ -7,6 +7,7 @@ nav {
   position: relative;
   perspective: 600px;
   background-color: #181818;
+  box-shadow: 0 0 30px rgb(0, 0, 1);
 }
 
 .cool > li > a {
@@ -202,29 +203,34 @@ h4.photo {
   color: #6e6e6e;
   font-size: 200px;
   margin: 0;
+  padding: 0;
 }
 
 [class^="fi-ecommerce-"]:before {
   color: tomato;
   font-size: 200px;
   margin: 0;
+  padding: 0;
 }
 
 [class^="fi-tech-"]:before {
   color: #4d91ff;
   font-size: 200px;
   margin: 0;
+  padding: 0;
 }
 
 [class^="fi-interface-"]:before {
   color: indianred;
   font-size: 200px;
   margin: 0;
+  padding: 0;
 }
 
 [class^="fi-creative-"]:before {
   font-size: 200px;
   margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 1285px) {
@@ -240,6 +246,15 @@ h4.photo {
   .wrap.active .wrap_two {
     padding-left: 20px;
   }
+
+  .wrap .wrap__block_item {
+    width: 200px;
+  }
+
+  .wrap.active .wrap__block_item {
+    width: 50px;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -265,6 +280,10 @@ h4.photo {
   }
   h4 {
     font-size: 12px;
+    width: 100px;
+  }
+
+  .wrap .wrap__block_item {
     width: 100px;
   }
 }
@@ -305,6 +324,10 @@ h4.photo {
 
   .cool > li > a {
     padding-top: 12px;
+  }
+
+  .wrap.active .wrap__block_item {
+    width: 40px;
   }
 
 }

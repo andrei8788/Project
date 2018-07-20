@@ -1,17 +1,43 @@
 .wrap_map {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.wrap_map .block_button {
+  margin: 5px;
+}
+
+.wrap_map .block_span {
+  display: flex;
+  margin: 10px 0 20px;
+  flex-direction: column;
+}
+
+button {
+  box-shadow: 0 0 30px rgba(0,0,0,1);
 }
 
 .map {
   width: 70%;
-  height: 450px;
+  height: 380px;
   box-shadow: 0 0 30px rgba(0,0,0,1);
+}
+
+@media screen and (max-width: 650px) {
+  h6 {
+    padding-left: 55px;
+    font-size: 12px;
+  }
+
+  .block_span {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 420px) {

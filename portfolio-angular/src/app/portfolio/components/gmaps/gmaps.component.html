@@ -1,3 +1,13 @@
-<div class="wrap_map">
+<div class="wrap_map" @fade>
+  <h6 title="
+Примечание. После того, как Track Me включен, обновите страницу, чтобы включить функцию Find me!">Note: Once Track me is enabled, refresh page to enable Find me feature!</h6>
+  <div class="block_button">
+    <button [disabled]="isTracking" class="btn btn-primary" (click)="findMe()">Find me</button>
+    <button class="btn btn-primary" (click)="trackMe()">Track me</button>
+  </div>
+  <div class="block_span">
+    <span>Latitude: {{currentLat}}</span>
+    <span>Longitude: {{currentLong}}</span>
+  </div>
   <div class="map" #gmap></div>
 </div>
