@@ -2,7 +2,11 @@
     (mouseout)="hideButtonDelete()">
   <div class="wrap">
     <div class="check">
-      <input type="checkbox" [checked]="taskItem.isDone" (change)="onChange()" class="input_check">
+        <i (click)="onChange(); hideButtonDelete()" class="icons material-icons" *ngIf="!taskItem.isDone">
+          check_circle_outline</i>
+        <i (click)="onChange(); hideButtonDelete()" class="icons material-icons" *ngIf="taskItem.isDone">check_circle
+        </i>
+        <input type="checkbox" id="clast" [checked]="taskItem.isDone" class="input_check">
       <div class="text" (dblclick)="changeTitle()" *ngIf="isStateTitle">{{ taskItem.title }}</div>
     </div>
     <div class="change_title" *ngIf="!isStateTitle">
@@ -10,9 +14,12 @@
              value="{{ taskItem.title }}">
     </div>
     <div class="wrap_delete__img" *ngIf="!isStatePreloader">
-      <img class="delete delete_img" src="../../../../../../assets/img/delete.png"
-           (click)="delete(); hideButtonDelete()"
-           [ngStyle]="{'display': hover ? 'inline' : 'none'}"/>
+      <i class="delete material-icons"
+         (click)="delete(); hideButtonDelete()"
+         [ngStyle]="{'display': hover ? 'inline' : 'none'}"
+      >
+        delete_forever
+      </i>
     </div>
     <div class="loading" *ngIf="isStatePreloader">
       <img class="delete" src="../../../../../../assets/img/loading.gif">

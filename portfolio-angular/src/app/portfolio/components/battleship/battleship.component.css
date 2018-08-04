@@ -1,13 +1,16 @@
-.title {
-  text-align: center;
-  color: tomato;
-  letter-spacing: 4px;
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../../../../assets/img/bgbatleship.jpg") no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 div#board {
   position: relative;
   width: 505px;
   height: 455px;
-  margin: 50px auto 0;
+  margin: 100px auto 0;
   background: url("../../../../assets/imgbattleship/board.jpg") no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -29,7 +32,6 @@ div#messageArea {
 }
 table {
   border-spacing: 0;
-   /*border-collapse: collapse;*/
   position: absolute;
   left: 88px;
   top: 51px;
@@ -37,6 +39,7 @@ table {
 td {
   width: 51px;
   height: 51px;
+  color: transparent;
 }
 
 .form {
@@ -58,20 +61,41 @@ td {
   width: 70px;
 }
 
+.annotation {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.annotation h6 {
+  color: black;
+}
 
 @media screen and (max-width: 620px) {
   div#board {
     margin-left: 60px;
   }
+}
 
-  .title {
-    margin-left: 80px;
+@media screen and (max-width: 425px) {
+  .annotation {
+    width: 230px;
+    right: 70px;
+    margin-bottom: 20px;
+  }
+
+  div#board {
+    margin-top: 130px;
   }
 }
 
-@media screen and (max-width: 470px) {
-  h1 {
-    font-size: 25px;
+@media screen and (max-width: 362px) {
+  .annotation {
+    right: 10px;
   }
 }
+
 

@@ -1,12 +1,12 @@
-<li class="list-group-item">
+<div class="wrap">
   <div class="cover">{{ counter }} items</div>
-  <ul [ngClass]="{'disabled': disabled}">
-    <li class="All" (click)="onFilterChange(FilterValues.All); all()"
-        [ngStyle]="{'border': stateAll ? '1px solid lightslategrey' : ''}">All
-    </li>
-    <li class="Active" (click)="onFilterChange(FilterValues.Active); active()"
-        [ngStyle]="{'border': stateActive ? '1px solid lightslategrey' : ''}">Active</li>
-    <li class="Completed" (click)="onFilterChange(FilterValues.Completed); completed()"
-        [ngStyle]="{'border': stateCompleted ? '1px solid lightslategrey' : ''}">Completed</li>
-  </ul>
-</li>
+  <div [ngClass]="{'disabled': disabled}" class="wrap_buttons">
+    <div class="All" (click)="onFilterChange(FilterValues.All); all()"
+        [ngStyle]="{'border': stateAll ? '1px solid #01C' : '', 'color': stateAll ? '#fafafa' : ''}">All
+    </div>
+    <div class="Active" (click)="onFilterChange(FilterValues.Active); active()"
+        [ngStyle]="{'border': stateActive ? '1px solid #01C' : '', 'color': stateActive ? '#fafafa' : ''}">Active</div>
+    <div class="Completed" (click)="onFilterChange(FilterValues.Completed); completed()"
+        [ngStyle]="{'border': stateCompleted ? '1px solid #01C' : '', 'color': stateCompleted ? '#fafafa' : ''}">Completed</div>
+  </div>
+</div>

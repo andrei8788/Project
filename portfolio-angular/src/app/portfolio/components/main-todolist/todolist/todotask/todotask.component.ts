@@ -1,7 +1,7 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 import {Task} from '../models/app.task';
-import {TasksService} from '../../../../../shared/services/tasks.service';
+import {TasksService} from '../../../../shared/services/tasks.service';
 import {messageTrigger} from '../../../../../shared/animations/message.animation';
 
 @Component({

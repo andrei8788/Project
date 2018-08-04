@@ -1,16 +1,19 @@
-<div class="title">
-  <h1>Game Battle-Ship</h1>
-</div>
-<div id="board" @fade>
-  <div id="messageArea" [textContent]="displayMessage"></div>
-  <table>
-    <tr *ngFor="let tr of table">
-      <td *ngFor="let td of tr" class="{{td}}"></td>
-    </tr>
-  </table>
-  <div class="form">
-    <input type="text" #guess (keyup.enter)="handleFireButton(guess.value); guess.value=''" placeholder="A0">
-    <input type="button" (click)="handleFireButton(guess.value); guess.value=''" value="Fire!">
+<div class="background">
+  <div id="board" @fade>
+    <div id="messageArea" [textContent]="displayMessage"></div>
+    <table>
+      <tr *ngFor="let tr of table; let r = index">
+        <td *ngFor="let td of tr; let d = index" class="{{td}}" (click)="handleFireClick($event)">{{r.toString() + d}}</td>
+      </tr>
+    </table>
+    <div class="form">
+      <input type="text" #guess (keyup.enter)="handleFireButton(guess.value); guess.value=''" placeholder="A0">
+      <input type="button" (click)="handleFireButton(guess.value); guess.value=''" value="Fire!">
+    </div>
+  </div>
+  <div class="annotation">
+    <h6 title="Вы можете производить выстрел по клику на поле.">You can make a shot by clicking on the field.</h6>
   </div>
 </div>
+
 

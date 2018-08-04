@@ -17,6 +17,7 @@ export class BattleshipComponent implements OnInit {
   displayMessage: string;
   table: Array<Array<string>>;
   columns: Array<string>;
+  lettersOfTheField: [string] = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
   constructor() {
     this.verifications = new VerificationOfEnteredData();
@@ -63,6 +64,15 @@ export class BattleshipComponent implements OnInit {
     return (message) => {
       this.displayMessage = message;
     };
+  }
+
+  handleFireClick(e) {
+    let guess = e.target.innerText;
+    const firstCharacter = +guess[0];
+    const secondCharacter = guess[1];
+    const characterField = this.lettersOfTheField[firstCharacter];
+    guess = characterField + secondCharacter;
+    this.handleFireButton(guess);
   }
 
   handleFireButton(guess) {

@@ -5,7 +5,7 @@
                   (createTask)="onCreateTask($event)"
                   [idList]="id">
     </app-todoform>
-    <ul [ngClass]="{'disabled': disabled, 'list-group': true}">
+    <ul [ngClass]="{'disabled': disabled, 'list-group': true, 'padding': tasks.length === 0}">
          <app-todotask [idList]="id"
                        [taskItem]="task"
                        [counterTask]="counter"

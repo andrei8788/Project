@@ -1,5 +1,12 @@
-<div class="grid" @fade>
+<div class="grid"
+     @fade
+>
     <ks-modal-gallery [id]="0" [modalImages]="images"
                       [plainGalleryConfig]="plainGalleryGrid"
     ></ks-modal-gallery>
+</div>
+<div class="load_image">
+  <div class="load_button" (click)="loadImage(); isLoader = false">
+    More image
+  </div>
 </div>

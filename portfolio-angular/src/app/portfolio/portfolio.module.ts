@@ -14,6 +14,8 @@ import {PortfolioComponent} from './portfolio.component';
 import {PortfolioRoutingModule} from './portfolio-routing.module';
 import {MessageComponent} from '../core/components/message.component';
 import {GmapsComponent} from './components/gmaps/gmaps.component';
+import {CanvasComponent} from './components/canvas/canvas.component';
+import {ImagesLinkService} from './shared/services/images-link.service';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import {GmapsComponent} from './components/gmaps/gmaps.component';
     CalculatorComponent,
     PhotoGalleryComponent,
     PortfolioComponent,
-    GmapsComponent
+    GmapsComponent,
+    CanvasComponent
   ],
   imports: [
     CommonModule,
     ModalGalleryModule,
     PortfolioRoutingModule
-  ]
+  ],
+  providers: [ImagesLinkService]
 })
 
 export class PortfolioModule {}

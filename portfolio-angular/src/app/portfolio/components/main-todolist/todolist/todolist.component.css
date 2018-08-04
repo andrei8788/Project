@@ -2,14 +2,16 @@
   width: 500px;
   margin: 0 auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
 }
 
-.hide {
-  display: none;
+.list-group {
+  background: #16F;
+  padding-bottom: 20px
 }
 
-.show {
-  display: block;
+.padding {
+  padding-bottom: 0;
 }
 
 .disabled {
@@ -23,13 +25,13 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 586px) {
   .toDoList {
     width: 400px;
   }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 488px) {
   .toDoList {
     width: 292px;
   }

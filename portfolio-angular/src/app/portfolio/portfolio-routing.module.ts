@@ -7,6 +7,7 @@ import {MainTodolistComponent} from './components/main-todolist/main-todolist.co
 import {CalculatorComponent} from './components/calculator/calculator.component';
 import {PortfolioComponent} from './portfolio.component';
 import {GmapsComponent} from './components/gmaps/gmaps.component'
+import {CanvasComponent} from "./components/canvas/canvas.component";
 
 const portfolioRoutes: Routes = [
   { path: '', component: PortfolioComponent, children: [
@@ -14,7 +15,8 @@ const portfolioRoutes: Routes = [
       { path: 'battleship', component: BattleshipComponent },
       { path: 'todolist', component: MainTodolistComponent },
       { path: 'calculator', component: CalculatorComponent},
-      { path: 'map', component: GmapsComponent}
+      { path: 'map', component: GmapsComponent},
+      { path: 'canvas', component: CanvasComponent}
   ]}
 ];
 

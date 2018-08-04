@@ -1,3 +1,4 @@
+<div class="background"></div>
 <nav
   class="top"
   #nav
@@ -46,70 +47,109 @@
 <div class="wrap" @fade
      [ngClass]="{'active': isActive}"
 >
-  <div class="wrap_first">
+  <div class="block">
     <div class="wrap_block">
-      <div class="wrap__block_item"
-           (click)="onActive()"
-           [routerLink]="['/portfolio','photo-gallery']"
-           title="Photo-gallery"
-      >
-        <i class="fi fi-creative-picture"></i>
-        <h4
-          class="photo"
-          *ngIf="!isActive"
-        >Photo-gallery</h4>
+      <div class="wrap__block_item" title="Game Battle-Ship">
+        <img src="../../assets/img/battleship.gif" alt="Game Battle-Ship" class="battleship">
       </div>
-      <div class="wrap__block_item"
-           (click)="onActive()"
-           [routerLink]="['/portfolio','calculator']"
-           title="Calculator"
+      <a
+        (click)="onActive()"
+        [routerLink]="['/portfolio','battleship']"
+        *ngIf="!isActive"
       >
-        <i class="fi-ecommerce-mathematics"></i>
-        <h4
-          *ngIf="!isActive"
-          class="calculator"
-        >Calculator</h4>
-      </div>
+        <h4 class="battleship">Game Battle-Ship</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
     </div>
+
     <div class="wrap_block">
-      <div class="wrap__block_item"
-           (click)="onActive()"
-           [routerLink]="['/portfolio','battleship']"
-           title="Game Battle-Ship"
-      >
-        <i class="fi-tech-gamepad"></i>
-        <h4
-          *ngIf="!isActive"
-          class="battleship"
-        >Game Battle-Ship</h4>
+      <div class="wrap__block_item" title="Calculator">
+        <img src="../../assets/img/calculator.gif" alt="calculator" class="calculator">
       </div>
-      <div class="wrap__block_item"
-           (click)="onActive()"
-           [routerLink]="['/portfolio','todolist']"
-           title="To do list"
+      <a
+        (click)="onActive()"
+        [routerLink]="['/portfolio','calculator']"
+        *ngIf="!isActive"
       >
-        <i class="fi-interface-list-2"></i>
-        <h4
-          *ngIf="!isActive"
-          class="list"
-        >To do list</h4>
-      </div>
+        <h4 class="calculator">Calculator</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
     </div>
   </div>
-  <div class="wrap_two">
+
+  <div class="block">
     <div class="wrap_block">
-      <div class="wrap__block_item last_block"
-           (click)="onActive()"
-           [routerLink]="['/portfolio','map']"
-           title="Map"
-      >
-        <i class="fi-creative-placeholder"></i>
-        <h4
-          *ngIf="!isActive"
-          class="map"
-        >Map</h4>
+      <div class="wrap__block_item" title="Photo-gallery">
+        <img src="../../assets/img/photo.gif" alt="photo-gallery" class="photo">
       </div>
+      <a
+        (click)="onActive()"
+        [routerLink]="['/portfolio','photo-gallery']"
+        *ngIf="!isActive"
+      >
+        <h4 class="photo">Photo-gallery</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
+    </div>
+
+    <div class="wrap_block">
+      <div class="wrap__block_item" title="To do list">
+        <img src="../../assets/img/todolist.gif" alt="To Do List" class="list">
+      </div>
+      <a
+        (click)="onActive()"
+        [routerLink]="['/portfolio','todolist']"
+        *ngIf="!isActive"
+      >
+        <h4 class="list">To do list</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="wrap_block">
+      <div class="wrap__block_item last_block" title="Map">
+        <img src="../../assets/img/map.gif" class="map" alt="Map">
+      </div>
+      <a
+        [routerLink]="['/portfolio','map']"
+        (click)="onActive()"
+        *ngIf="!isActive"
+      >
+        <h4 class="map">Map</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
+    </div>
+
+    <div class="wrap_block">
+      <div class="wrap__block_item last_block" title="Canvas">
+        <img src="../../assets/img/canvas.gif" alt="Canvas" class="canvas">
+      </div>
+      <a
+        [routerLink]="['/portfolio','canvas']"
+        (click)="onActive()"
+        *ngIf="!isActive"
+      >
+        <h4 class="canvas">Canvas</h4>
+      </a>
+      <div class="red span"></div>
+      <div class="blue span"></div>
+      <div class="green span"></div>
     </div>
   </div>
 </div>
 <router-outlet></router-outlet>
+<footer>
+  <div style="height: 100px"></div>
+</footer>
