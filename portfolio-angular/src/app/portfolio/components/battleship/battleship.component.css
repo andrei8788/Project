@@ -5,6 +5,7 @@
   background: url("../../../../assets/img/bgbatleship.jpg") no-repeat;
   background-size: cover;
   z-index: -1;
+  overflow: auto;
 }
 div#board {
   position: relative;

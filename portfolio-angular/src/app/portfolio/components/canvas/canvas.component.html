@@ -1,3 +1,55 @@
 <div class="wrap">
-  <canvas #canvas class="canvas">Your browser is not supported!</canvas>
+  <canvas
+    #canvas
+    class="canvas"
+  >
+    Your browser is not supported!
+  </canvas>
+</div>
+<div class="edit_draw">
+  <div class="block_1">
+    <div class="title_1">
+      <p>Line thickness</p>
+    </div>
+    <select #value1 (change)="changeThicknessLine(value1.value)">
+      <option>10</option>
+      <option>20</option>
+      <option>30</option>
+      <option>40</option>
+      <option>50</option>
+      <option>60</option>
+      <option>70</option>
+      <option>80</option>
+      <option>90</option>
+      <option>100</option>
+    </select>
+  </div>
+  <div class="block_2">
+    <div class="title_2">
+      <p>Line color</p>
+    </div>
+    <input #value2 type="color" (change)="changeColor(value2.value)">
+  </div>
+  <div class="block_3">
+    <div class="title_3">
+      <p>Line type</p>
+    </div>
+    <select #value3 (change)="changeTypeLine(value3.value)">
+      <option>round</option>
+      <option>butt</option>
+      <option>square</option>
+    </select>
+  </div>
+  <div class="block_4">
+    <div class="title_4">
+      <p>Eraser</p>
+    </div>
+    <button class="btn btn-large" (click)="eraser()">Eraser</button>
+  </div>
+  <div class="block_5">
+    <div class="title_5">
+      <p>Clean field</p>
+    </div>
+    <button class="btn btn-info" (click)="cleanField()">Clean</button>
+  </div>
 </div>

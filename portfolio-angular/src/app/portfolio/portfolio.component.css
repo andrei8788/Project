@@ -271,12 +271,22 @@ a:hover {
   .wrap {
     padding-left: 25%;
   }
+
+  .wrap .block {
+    width: 740px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .wrap {
     padding-left: 13%;
   }
+
+  .wrap .block,
+  .wrap .wrap_block {
+    width: 290px;
+  }
+
 }
 
 @media screen and (max-width: 400px) {

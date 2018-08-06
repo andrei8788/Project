@@ -9,7 +9,6 @@ import {LazyLoadImageModule} from 'ng-lazyload-image';
 import 'hammerjs';
 import 'mousetrap';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
-import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 import {TasksService} from './portfolio/shared/services/tasks.service';
 import {AppComponent} from './app.component';
@@ -33,8 +32,7 @@ import {AboutMeComponent} from './components/about-me/about-me.component';
     BrowserAnimationsModule,
     LazyLoadImageModule,
     PerfectScrollbarModule,
-    ModalGalleryModule.forRoot(),
-    InfiniteScrollModule
+    ModalGalleryModule.forRoot()
   ],
   providers: [
     TasksService
