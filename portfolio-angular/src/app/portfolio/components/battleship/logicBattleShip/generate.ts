@@ -47,6 +47,7 @@ export class GenerateShips {
   }
 
   collision(locations) {
+
     for (let i = 0; i < this.numShips; i++) {
       const ship = this.ships[i];
       for (let j = 0; j < locations.length; j++) {

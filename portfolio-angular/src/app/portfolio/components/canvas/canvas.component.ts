@@ -90,5 +90,4 @@ export class CanvasComponent implements AfterViewInit {
   cleanField() {
     this.cx.clearRect(0, 0, this.width, this.height);
   }
-
 }

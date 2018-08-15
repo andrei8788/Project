@@ -37,7 +37,12 @@ nav {
   background-color: #4d91ff;
   box-shadow: 0 0 5px rgb(0, 0, 1);
   width: 100%;
-  opacity: 0.9;
+  -webkit-transition: .4s ease-out;
+  -o-transition: .4s ease-out;
+  -moz-transition: .4s ease-out;
+  -moz-transition-delay: 0.5s;
+  transition: .4s ease-out;
+
 }
 
 .cool > li > a {

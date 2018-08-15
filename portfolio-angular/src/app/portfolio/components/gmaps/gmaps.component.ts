@@ -72,9 +72,8 @@ export class GmapsComponent implements OnInit {
         map: this.map,
         title: 'Got you!',
         icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-      });
-    }
-    else {
+      })
+    } else {
       this.marker.setPosition(location);
     }
   }
