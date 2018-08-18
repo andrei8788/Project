@@ -58,13 +58,18 @@ export class PortfolioComponent implements OnInit, OnDestroy {
 
   onScroll(e) {
     const position = e.path[1].pageYOffset;
-    if(position > 49) {
-      this.style.nativeElement.style.opacity = 0;
-      this.style.nativeElement.style['z-index'] = -1;
+    if (this.style === undefined) {
+      return;
     } else {
-      this.style.nativeElement.style.opacity = 1;
-      this.style.nativeElement.style['z-index'] = 1;
+      if(position > 49) {
+        this.style.nativeElement.style.opacity = 0;
+        this.style.nativeElement.style['z-index'] = -1;
+      } else {
+        this.style.nativeElement.style.opacity = 1;
+        this.style.nativeElement.style['z-index'] = 1;
+      }
     }
+
   }
 
   ngOnDestroy() {
