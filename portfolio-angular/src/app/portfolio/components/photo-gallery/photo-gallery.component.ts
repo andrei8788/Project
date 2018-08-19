@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, DoCheck, OnDestroy, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {
   GridLayout,
   Image,
@@ -15,7 +15,6 @@ import {ImagesLinkService} from '../../shared/services/images-link.service';
   animations: [fadeStateTrigger]
 })
 export class PhotoGalleryComponent {
-
   isActive = false;
 
   j = 20;

@@ -58,6 +58,7 @@ export class PortfolioComponent implements OnInit, OnDestroy {
 
   onScroll(e) {
     const position = e.path[1].pageYOffset;
+    // $("name-of-div").getNiceScroll().resize();
     if (this.style === undefined) {
       return;
     } else {

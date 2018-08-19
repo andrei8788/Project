@@ -1,155 +1,157 @@
-<div class="background"></div>
-<nav
-  class="top"
-  #nav
-  @fade
-  *ngIf="!isActive"
->
-  <div class="dropdownBackground" #background>
-    <span class="arrow"></span>
-  </div>
+<div class="wrap_content" *ngIf="!isActive">
+  <div class="background"></div>
+  <nav
+    class="top"
+    #nav
+    @fade
+    *ngIf="!isActive"
+  >
+    <div class="dropdownBackground" #background>
+      <span class="arrow"></span>
+    </div>
 
-  <ul class="cool">
-    <li
-      #block1
-      (mouseenter)="handleEnter(block1, background, dropdown1, nav)"
-      (mouseleave)="handleLeave(block1, background)"
-    >
-      <a routerLink="/about-me">About Me</a>
-      <div class="dropdown dropdown1" #dropdown1>
-        <div class="bio">
-          <img src="../../../assets/img/foto.jpg">
-          <p >I have high education.
-            I'm attracted to everything that is connected with logic. In the IT industry it must be actively used. This is one
-            of the main reasons why I like programming. I studied such technologies as HTML 5, CSS, JS, JQuery, Angular 5,
-            object-oriented programming TypeScript and version control system Git. In English I can read technical
-            documentation. Experience is very important to me, so I'm willing to work hard and improve my skills every day.
-            Quite a quick study and adaptation. I will be happy for your suggestions, calls and invitations to become a part of
-            your team.</p>
+    <ul class="cool">
+      <li
+        #block1
+        (mouseenter)="handleEnter(block1, background, dropdown1, nav)"
+        (mouseleave)="handleLeave(block1, background)"
+      >
+        <a routerLink="/about-me">About Me</a>
+        <div class="dropdown dropdown1" #dropdown1>
+          <div class="bio">
+            <img src="../../../assets/img/foto.jpg">
+            <p >I have high education.
+              I'm attracted to everything that is connected with logic. In the IT industry it must be actively used. This is one
+              of the main reasons why I like programming. I studied such technologies as HTML 5, CSS, JS, JQuery, Angular 5,
+              object-oriented programming TypeScript and version control system Git. In English I can read technical
+              documentation. Experience is very important to me, so I'm willing to work hard and improve my skills every day.
+              Quite a quick study and adaptation. I will be happy for your suggestions, calls and invitations to become a part of
+              your team.</p>
+          </div>
         </div>
-      </div>
-    </li>
-    <li
-      #block2
-      (mouseenter)="handleEnter(block2, background, dropdown2, nav)"
-      (mouseleave)="handleLeave(block2, background)"
-    >
-      <a>Other Links</a>
-      <ul class="dropdown dropdown2" #dropdown2>
-        <li><a class="button" href="https://twitter.com/ADolozhevskij" target="_blank">Twitter</a></li>
-        <li><a class="button" href="https://www.facebook.com/andrei.dolozhevskij" target="_blank">Facebook</a></li>
-        <li><a class="button" href="https://www.linkedin.com/in/andrei-dolozhevskij-46aa87158/" target="_blank">Linkedin</a></li>
-        <li><a class="button" href="https://project-andrei-d.firebaseapp.com" target="_blank">Link to Firebase</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-<div class="wrap" @fade
-     [ngClass]="{'active': isActive}"
->
-  <div class="block">
-    <div class="wrap_block">
-      <div class="wrap__block_item" title="Game Battle-Ship">
-        <img src="../../assets/img/battleship.gif" alt="Game Battle-Ship" class="battleship">
-      </div>
-      <a
-        (click)="onActive()"
-        [routerLink]="['/portfolio','battleship']"
-        *ngIf="!isActive"
+      </li>
+      <li
+        #block2
+        (mouseenter)="handleEnter(block2, background, dropdown2, nav)"
+        (mouseleave)="handleLeave(block2, background)"
       >
-        <h4 class="battleship">Game Battle-Ship</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
+        <a>Other Links</a>
+        <ul class="dropdown dropdown2" #dropdown2>
+          <li><a class="button" href="https://twitter.com/ADolozhevskij" target="_blank">Twitter</a></li>
+          <li><a class="button" href="https://www.facebook.com/andrei.dolozhevskij" target="_blank">Facebook</a></li>
+          <li><a class="button" href="https://www.linkedin.com/in/andrei-dolozhevskij-46aa87158/" target="_blank">Linkedin</a></li>
+          <li><a class="button" href="https://project-andrei-d.firebaseapp.com" target="_blank">Link to Firebase</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrap" @fade
+       [ngClass]="{'active': isActive}"
+  >
+    <div class="block">
+      <div class="wrap_block">
+        <div class="wrap__block_item" title="Game Battle-Ship">
+          <img src="../../assets/img/battleship.gif" alt="Game Battle-Ship" class="battleship">
+        </div>
+        <a
+          (click)="onActive()"
+          [routerLink]="['/portfolio','battleship']"
+          *ngIf="!isActive"
+        >
+          <h4 class="battleship">Game Battle-Ship</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
+      </div>
+
+      <div class="wrap_block">
+        <div class="wrap__block_item" title="Calculator">
+          <img src="../../assets/img/calculator.gif" alt="calculator" class="calculator">
+        </div>
+        <a
+          (click)="onActive()"
+          [routerLink]="['/portfolio','calculator']"
+          *ngIf="!isActive"
+        >
+          <h4 class="calculator">Calculator</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
+      </div>
     </div>
 
-    <div class="wrap_block">
-      <div class="wrap__block_item" title="Calculator">
-        <img src="../../assets/img/calculator.gif" alt="calculator" class="calculator">
+    <div class="block">
+      <div class="wrap_block">
+        <div class="wrap__block_item" title="Photo-gallery">
+          <img src="../../assets/img/photo.gif" alt="photo-gallery" class="photo">
+        </div>
+        <a
+          (click)="onActive()"
+          [routerLink]="['/portfolio','photo-gallery']"
+          *ngIf="!isActive"
+        >
+          <h4 class="photo">Photo-gallery</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
       </div>
-      <a
-        (click)="onActive()"
-        [routerLink]="['/portfolio','calculator']"
-        *ngIf="!isActive"
-      >
-        <h4 class="calculator">Calculator</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
-    </div>
-  </div>
 
-  <div class="block">
-    <div class="wrap_block">
-      <div class="wrap__block_item" title="Photo-gallery">
-        <img src="../../assets/img/photo.gif" alt="photo-gallery" class="photo">
+      <div class="wrap_block">
+        <div class="wrap__block_item" title="To do list">
+          <img src="../../assets/img/todolist.gif" alt="To Do List" class="list">
+        </div>
+        <a
+          (click)="onActive()"
+          [routerLink]="['/portfolio','todolist']"
+          *ngIf="!isActive"
+        >
+          <h4 class="list">To do list</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
       </div>
-      <a
-        (click)="onActive()"
-        [routerLink]="['/portfolio','photo-gallery']"
-        *ngIf="!isActive"
-      >
-        <h4 class="photo">Photo-gallery</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
-    </div>
-
-    <div class="wrap_block">
-      <div class="wrap__block_item" title="To do list">
-        <img src="../../assets/img/todolist.gif" alt="To Do List" class="list">
-      </div>
-      <a
-        (click)="onActive()"
-        [routerLink]="['/portfolio','todolist']"
-        *ngIf="!isActive"
-      >
-        <h4 class="list">To do list</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="wrap_block">
-      <div class="wrap__block_item last_block" title="Map">
-        <img src="../../assets/img/map.gif" class="map" alt="Map">
-      </div>
-      <a
-        [routerLink]="['/portfolio','map']"
-        (click)="onActive()"
-        *ngIf="!isActive"
-      >
-        <h4 class="map">Map</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
     </div>
 
-    <div class="wrap_block">
-      <div class="wrap__block_item last_block" title="Canvas">
-        <img src="../../assets/img/canvas.gif" alt="Canvas" class="canvas">
+    <div class="block">
+      <div class="wrap_block">
+        <div class="wrap__block_item last_block" title="Map">
+          <img src="../../assets/img/map.gif" class="map" alt="Map">
+        </div>
+        <a
+          [routerLink]="['/portfolio','map']"
+          (click)="onActive()"
+          *ngIf="!isActive"
+        >
+          <h4 class="map">Map</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
       </div>
-      <a
-        [routerLink]="['/portfolio','canvas']"
-        (click)="onActive()"
-        *ngIf="!isActive"
-      >
-        <h4 class="canvas">Canvas</h4>
-      </a>
-      <div class="red span"></div>
-      <div class="blue span"></div>
-      <div class="green span"></div>
+
+      <div class="wrap_block">
+        <div class="wrap__block_item last_block" title="Canvas">
+          <img src="../../assets/img/canvas.gif" alt="Canvas" class="canvas">
+        </div>
+        <a
+          [routerLink]="['/portfolio','canvas']"
+          (click)="onActive()"
+          *ngIf="!isActive"
+        >
+          <h4 class="canvas">Canvas</h4>
+        </a>
+        <div class="red span"></div>
+        <div class="blue span"></div>
+        <div class="green span"></div>
+      </div>
     </div>
   </div>
 </div>
 <router-outlet></router-outlet>
-<footer>
+<footer *ngIf="!isActive">
   <div style="height: 100px"></div>
 </footer>

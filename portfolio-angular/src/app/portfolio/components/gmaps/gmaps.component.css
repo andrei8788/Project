@@ -1,3 +1,10 @@
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(left, #6ab3f2, #F78154);
+}
 .wrap_map {
   padding-top: 10px;
   padding-bottom: 50px;

@@ -1,5 +1,5 @@
-<div class="background">
-  <div id="board" @fade>
+<div class="background" @fade>
+  <div id="board">
     <div id="messageArea" [textContent]="displayMessage"></div>
     <table>
       <tr *ngFor="let tr of table; let r = index">
