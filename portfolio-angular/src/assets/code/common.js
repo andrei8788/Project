@@ -13,10 +13,11 @@ $(document).ready(function() {
     sensitiverail: true,
     background: "#ccc",
     zindex:99999,
-    hidecursordelay: 4000,
     boxzoom: false,
     grabcursorenabled:true
   });
+
+  $("body").getNiceScroll().resize();
 
 	$(document).click(() => {
     $("body").getNiceScroll().resize();
