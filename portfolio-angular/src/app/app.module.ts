@@ -3,18 +3,16 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app.routing.module';
-import {ModalGalleryModule} from '@ks89/angular-modal-gallery';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {LazyLoadImageModule} from 'ng-lazyload-image';
-import 'hammerjs';
-import 'mousetrap';
-import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
-import {TasksService} from './portfolio/shared/services/tasks.service';
+
 import {AppComponent} from './app.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {AboutMeComponent} from './components/about-me/about-me.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import {PortfolioModule} from './portfolio/portfolio.module';
+import {WildcardRoutingModule} from './wildcard-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,13 +28,10 @@ import {AboutMeComponent} from './components/about-me/about-me.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LazyLoadImageModule,
-    PerfectScrollbarModule,
-    ModalGalleryModule.forRoot()
+    PortfolioModule,
+    WildcardRoutingModule
   ],
-  providers: [
-    TasksService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

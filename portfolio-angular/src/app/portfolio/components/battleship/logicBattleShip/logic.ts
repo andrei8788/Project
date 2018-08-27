@@ -1,7 +1,7 @@
 import {ships} from './ships';
 import {EventEmitter} from '@angular/core';
-import {IShip} from '../../../shared/interface/app.interfaceIShip';
-import {IDisplay} from '../../../shared/interface/app.interfaceIDisplay';
+import {IShip} from '../shared/interface/app.interfaceIShip';
+import {IDisplay} from '../shared/interface/app.interfaceIDisplay';
 
 export class Logic {
   displayHit: string;

@@ -6,7 +6,7 @@ import {
   PlainGalleryStrategy
 } from '@ks89/angular-modal-gallery';
 import {fadeStateTrigger} from '../../../shared/animations/fade.animation';
-import {ImagesLinkService} from '../../shared/services/images-link.service';
+import {ImagesLinkService} from './shared/services/images-link.service';
 
 @Component({
   selector: 'app-photo-gallery',

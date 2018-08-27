@@ -1,8 +1,8 @@
-import { TasksService } from '../../../shared/services/tasks.service';
-import { FilterValues } from '../../../shared/enums/app.enums';
+import {TasksService} from '../shared/services/tasks.service';
+import {FilterValues} from '../shared/enums/app.enums';
 import {Task} from './models/app.task';
 import {Component, OnInit, Input} from '@angular/core';
-import {ITaskFromServerArray} from '../../../shared/interface/app.interfaceForTasks';
+import {ITaskFromServerArray} from '../shared/interface/app.interfaceForTasks';
 
 @Component({
   selector: 'app-todolist',

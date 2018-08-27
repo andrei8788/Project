@@ -1,5 +1,5 @@
 import {ships} from './ships';
-import {IShip} from '../../../shared/interface/app.interfaceIShip';
+import {IShip} from '../shared/interface/app.interfaceIShip';
 
 export class GenerateShips {
   boardSize: number;

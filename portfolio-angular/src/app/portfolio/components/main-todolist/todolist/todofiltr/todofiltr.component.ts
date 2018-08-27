@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { FilterValues } from '../../../../shared/enums/app.enums';
+import { FilterValues } from '../../shared/enums/app.enums';
 @Component({
   selector: 'app-todofiltr',
   templateUrl: './todofiltr.component.html',

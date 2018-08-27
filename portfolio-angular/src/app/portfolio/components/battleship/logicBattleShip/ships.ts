@@ -1,4 +1,4 @@
-import {IShip} from '../../../shared/interface/app.interfaceIShip';
+import {IShip} from '../shared/interface/app.interfaceIShip';
 
 export const ships: IShip[] = [
   {locations: ['0', '0', '0'], hits: ['', '', '']}, // positions

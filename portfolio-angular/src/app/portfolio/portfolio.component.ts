@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {fadeStateTrigger} from '../shared/animations/fade.animation';
 import {Subscription} from 'rxjs/Subscription';
 @Component({
@@ -10,7 +10,7 @@ import {Subscription} from 'rxjs/Subscription';
 })
 export class PortfolioComponent implements OnInit, OnDestroy {
   @ViewChild('nav') style: ElementRef;
-  isActive: boolean | null = false;
+  isActive = true;
 
   subscription: Subscription;
 
@@ -18,11 +18,14 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    !this.isActive ? this.isActive = true : this.isActive = false;
-    this.subscription = this.route.paramMap.subscribe(params => {
-      if (params.get('isActive') !== null) {
-        this.isActive = !params.get('isActive');
+    this.subscription = this.route.data.subscribe((data) => {
+      function isEmpty(data) {
+        for (let key in data) {
+          return false;
+        }
+        return true;
       }
+        this.isActive = isEmpty(data);
     });
 
     window.addEventListener('scroll', this.onScroll.bind(this));
